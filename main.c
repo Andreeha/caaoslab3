@@ -101,7 +101,7 @@ int main (int argc, const char** argv) {
 
   do {
     sem_getvalue(&slen, &v);
-  } while (v < 4);
+  } while (v < THREAD_CNT);
 
   while (freeq) pop();
 
