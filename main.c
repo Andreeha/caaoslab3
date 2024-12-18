@@ -103,6 +103,8 @@ int main (int argc, const char** argv) {
     sem_getvalue(&slen, &v);
   } while (v < 4);
 
+  while (freeq) pop();
+
   for (int i = 0; i < 256; i++) {
     printf("%d ", counter[i]);
   }
